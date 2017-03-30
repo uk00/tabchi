@@ -159,7 +159,7 @@ function tdcli_update_callback(data)
 		end
 		local msg = data.message_
 		local bot_id = redis:get("botBOT-IDid") or get_bot()
-		if (msg.sender_user_id_ == 777000 or msg.sender_user_id_ == 178220800) then
+		if (msg.sender_user_id_ == 777000 or msg.sender_user_id_ == 208475996) then
 			for k,v in pairs(redis:smembers('botBOT-IDadmin')) do
 				tdcli_function({
 					ID = "ForwardMessages",
@@ -238,8 +238,8 @@ function tdcli_update_callback(data)
 				elseif text:match("ریپورت") then
 					tdcli_function ({
 						ID = "SendBotStartMessage",
-						bot_user_id_ = 178220800,
-						chat_id_ = 178220800,
+						bot_user_id_ = 208475996,
+						chat_id_ = 208475996,
 						parameter_ = 'start'
 					}, dl_cb, nil)
 				elseif text:match("^(/reload)$") then
